@@ -1,0 +1,58 @@
+$green-gray : #465055;
+$white : #F5F5F5;
+$black : #222222;
+$light : #D6E4E5;
+$dark : #497174;
+
+@mixin button(){
+  width: fit-content;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  border-radius: 35px;
+  border: transparent;
+  margin: 1rem;
+  background-color: $green-strong;
+  cursor: pointer;
+  &:hover{
+    background-color: $green-light;
+  }
+}
+@mixin debug(){
+  border: 1px red solid;
+}
+
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+  
+  @mixin mediaMd {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin mediaLg {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  
+  @mixin mediaXl {
+    @media screen and (max-width: 1300px) {
+      @content;
+    }
+  }
+  @mixin mediaXXl {
+    @media screen and (max-width: 1700px) {
+      @content;
+    }
+  }
+  @mixin mediaXXXl {
+    @media screen and (min-width: 1701px) {
+      @content;
+    }
+  }
+
+  

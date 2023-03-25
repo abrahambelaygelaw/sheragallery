@@ -1,0 +1,1 @@
+export const photoTypes = ["Nature" , "Street Photography" , "Wallpaper" , "Fashon & Beauty" , "Technology" , "Architecture" , "People" , "Film" , "Athletics" , "Travel" , "Food and Drink" , "Art" , "Sprituality" , "Bussiness & Work" , "Current Events"]

@@ -1,0 +1,8 @@
+    
+    
+    /* const impressionismResult = await fetch(`${URL}${searchPictures}${apikey}&query=impressionism&page=${Math.floor(Math.random(1)*40)}`)
+    const impressionismData = await impressionismResult.json()
+    const showImpressionism = impressionismData.results.map(item=>
+      <img src={item.urls.regular} alt="" />
+      )
+      setImpressionism(showImpressionism) */
