@@ -2,19 +2,15 @@ import React,{useState,useContext} from "react"
 import { useParams,Link, useNavigate } from "react-router-dom"
 import { allContext } from "../../Constants/allContext"
 import useFetch from "../UseFetch"
-import ZeroResult from "../ZeroResult"
 const SearchUsers = () =>{
     const {query} = useParams()
     const [usersList , setUserList] = useState(null)
     const {URL ,apikey} = useContext(allContext)
     const url = `${URL}search/users?client_id=${apikey}&query=${query}&per_page=30`
     const {data,loading,error} = useFetch(url)
-    const [zeroResult , setZeroResult] = useState(false)
     const navigate = useNavigate()
     if (data){
-        if (data.results.length==0 && !usersList){
-            setZeroResult(true)
-        }
+
         if(!usersList){
             setUserList(data.results)
         }
@@ -22,7 +18,6 @@ const SearchUsers = () =>{
     document.title = `Users | ${query}`
     return (
         <>
-        {zeroResult && <ZeroResult/>}
         {usersList  && <div className="users">
             <div className="users-container">
             {  

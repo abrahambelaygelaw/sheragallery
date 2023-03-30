@@ -1,11 +1,7 @@
 import React ,{ useState,useEffect } from 'react'
 import { allContext } from './Constants/allContext';
 import { photoTypes } from './Constants/PhotoTypes';
-import {Route,
-   createRoutesFromElements,
-   createBrowserRouter,
-   RouterProvider
-  } from 'react-router-dom';
+import {Route, createRoutesFromElements,createBrowserRouter, RouterProvider } from 'react-router-dom';
 import User from './components/UserProfile/User';
 import CollectionPhotos from './components/Photos/CollectionPhotos';
 import Photos from './components/Photos/Photos';
@@ -62,7 +58,6 @@ function App() {
       }
       setTheme(localStorage.getItem("theme"))
   }, [])
-  console.log("rendered")
 
   return (
     <allContext.Provider value={{ URL , apikey , query , setQuery , setTheme , theme}}>

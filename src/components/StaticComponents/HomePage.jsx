@@ -21,9 +21,7 @@ const HomePage = () => {
   useEffect(()=>{
     if(data){
       setListPhotos([...listPhotos,...data.results])
-      if(data.results.length==0){
-        setZeroResult(true)
-      }
+
     }
   },[data])
   
@@ -31,7 +29,6 @@ const HomePage = () => {
     setScrollHeight(window.scrollY)
     if(window.innerHeight + window.scrollY>=document.body.scrollHeight){
       setPage(prev=>prev+1)
-      console.log(listPhotos)
     }
   }
   useEffect(()=>{
