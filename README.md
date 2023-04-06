@@ -1,5 +1,5 @@
 # sheragallery
-Shera is gallery app using react and unsplash api.
+Shera is gallery web app using react and unsplash api.
 To run sheragallery on your local machine.
    - create unsplash account, apply for api key
    - Fork The repository or download the zip file
