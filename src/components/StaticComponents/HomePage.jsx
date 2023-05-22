@@ -12,7 +12,7 @@ const HomePage = () => {
   const [page,setPage] = useState(1)
   
   const {URL , apikey} = useContext(allContext)
-  const url = `${URL}search/photos?client_id=${apikey}&query=random&per_page=30&page=${page}&order_by=popular`
+  const url = `${URL}search/photos?client_id=${apikey}&query=random&per_page=30&page=${page}`
     
   const {data,loading, error,fetch} = useFetch(url)
   
