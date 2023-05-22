@@ -9,7 +9,7 @@ const Photos = ({photoType}) => {
     const [page , setPage] = useState(1)
     const [scrollHeight , setScrollHeight] = useState(null)
     const {URL , apikey} = useContext(allContext)
-    const url = `${URL}search/photos?client_id=${apikey}&query=${photoType}&per_page=30&page=${page}&order_by=popular`
+    const url = `${URL}search/photos?client_id=${apikey}&query=${photoType}&per_page=30&page=${page}`
     
     const {data,loading, error,fetch} = useFetch(url)
     
